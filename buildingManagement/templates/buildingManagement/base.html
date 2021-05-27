@@ -58,79 +58,27 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li
-              class="
-                nav-item
-                {%
-                if
-                request.path
-                ==
-                '/'
-                %}active{%
-                endif
-                %}
-                px-lg-4
-              "
-            >
-              <a
-                class="nav-link text-uppercase text-expanded"
+              class="nav-item {% if request.path == '/'%} active {% endif %} px-lg-4">
+              <a class="nav-link text-uppercase text-expanded"
                 href="{% url 'Home' %}"
                 >Home</a
               >
             </li>
-            <li
-              class="
-                nav-item
-                {%
-                if
-                request.path
-                ==
-                '/stock/'
-                %}active{%
-                endif
-                %}
-                px-lg-4
-              "
-            >
+            <li class="nav-item {% if request.path == '/stock/' %}active{% endif %} px-lg-4">
               <a
                 class="nav-link text-uppercase text-expanded"
                 href="{% url 'Stock' %}"
                 >Stock</a
               >
             </li>
-            <li
-              class="
-                nav-item
-                {%
-                if
-                request.path
-                ==
-                '/reports/'
-                %}active{%
-                endif
-                %}
-                px-lg-4
-              "
-            >
+            <li class=" nav-item {% if request.path == '/reports/' %} active {% endif %} px-lg-4">
               <a
                 class="nav-link text-uppercase text-expanded"
                 href="{% url 'Reports' %}"
                 >Reports</a
               >
             </li>
-            <li
-              class="
-                nav-item
-                {%
-                if
-                request.path
-                ==
-                '/contact/'
-                %}active{%
-                endif
-                %}
-                px-lg-4
-              "
-            >
+            <li class=" nav-item {% if request.path == '/contact/' %}active{% endif %} px-lg-4 ">
               <a
                 class="nav-link text-uppercase text-expanded"
                 href="{% url 'Contact us' %}"
